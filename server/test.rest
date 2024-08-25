@@ -1,0 +1,38 @@
+### Test POST request with mixed data
+POST http://localhost:3000/bfhl
+Content-Type: application/json
+
+{
+    "data": ["M", "1", "334", "4", "B", "Z", "a"],
+    "full_name": "john_doe",
+    "dob": "17091999",
+    "email": "john@xyz.com",
+    "roll_number": "ABCD123"
+}
+
+### Test POST request with only numbers
+POST http://localhost:3000/bfhl
+Content-Type: application/json
+
+{
+    "data": ["2", "4", "5", "92"],
+    "full_name": "john_doe",
+    "dob": "17091999",
+    "email": "john@xyz.com",
+    "roll_number": "ABCD123"
+}
+
+### Test POST request with only alphabets
+POST http://localhost:3000/bfhl
+Content-Type: application/json
+
+{
+    "data": ["A", "C", "Z", "c", "i"],
+    "full_name": "john_doe",
+    "dob": "17091999",
+    "email": "john@xyz.com",
+    "roll_number": "ABCD123"
+}
+
+### Test GET request
+GET http://localhost:3000/bfhl
